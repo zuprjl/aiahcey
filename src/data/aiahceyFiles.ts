@@ -179,7 +179,9 @@ const aiahceyFiles: AiahceyFile[] = [
     dateAdded: '2021-06-11',
   },
 
-  // NEW ENTRIES — added from gallery audit June 2026
+  // Entries file-009 through file-016 added in first gallery audit
+
+
 
   {
     id: 'file-009',
@@ -332,6 +334,84 @@ const aiahceyFiles: AiahceyFile[] = [
     dynamicType: 'stacey-energizes-aiah',
     status: 'needs-review',
     dateAdded: '2026-04-10',
+  },
+  // Second gallery audit — June 2026
+
+  {
+    id: 'file-017',
+    caseLabel: 'FILE-017',
+    title: 'The Kikay Duo — Editorial',
+    imageSrc: '/images/files/file-017.jpg',
+    imageAlt: 'Aiah and Stacey in an editorial-style shoot, both wearing sunglasses — pink oval glasses and blue-rim glasses, aobab bag visible',
+    context: 'Styled content day or editorial shoot. Both wearing statement sunglasses — Stacey with pink oval frames, Aiah with blue-rim glasses. The "aobab" bag is visible in the shot. Camera-ready, confident, matching energy.',
+    observation:
+      'Two main rappers, both in editorial-level fits, both in contrasting sunglasses. Nobody is trying to outshine the other. The kikay energy is not competitive — it amplifies.',
+    significance:
+      'The clearest single-frame illustration of the Kikay Duo observation: two feminine, stylish energies in the same frame, neither dominating. The visual contrast is immediate and the complementarity is the whole point.',
+    tags: ['kikay-duo', 'editorial', 'sunglasses', 'femme-x-femme', 'styled'],
+    sourceLabel: 'Content shoot (source confirmation pending)',
+    sourceUrl: null,
+    subject: 'both',
+    dynamicType: 'blue-meets-pink',
+    status: 'needs-review',
+    dateAdded: '2025-01-01',
+  },
+  {
+    id: 'file-018',
+    caseLabel: 'FILE-018',
+    title: 'Backstage — Looking at the Phone Together',
+    imageSrc: '/images/files/file-018.jpg',
+    imageAlt: 'Aiah and Stacey backstage in elaborate silver and gold stage costumes, both leaning over a phone together, fully absorbed',
+    context: 'Backstage setting during a concert. Both in full elaborate stage costumes — silver and gold. Something on the phone has their complete attention. The staging chaos around them does not register.',
+    observation:
+      'Full concert production happening around them. Elaborate costumes. They are looking at a phone together like it is Sunday afternoon.',
+    significance:
+      'The Comfort Duo theme is strongest when it shows up in contexts that should not be comfortable — like a concert backstage in full costume. This is that.',
+    tags: ['backstage', 'comfort-duo', 'phone', 'costumes', 'silent-comfort'],
+    sourceLabel: 'Backstage documentation (source pending)',
+    sourceUrl: null,
+    subject: 'both',
+    dynamicType: 'aiah-grounds-stacey',
+    status: 'needs-review',
+    dateAdded: '2025-01-01',
+  },
+  {
+    id: 'file-019',
+    caseLabel: 'FILE-019',
+    title: 'Hotel Mirror — The Comfort Photo (Part II)',
+    imageSrc: '/images/files/file-019.jpg',
+    imageAlt: 'Aiah in black leather and Stacey in cream knit, leaning on each other in a hotel or building mirror selfie, both smiling',
+    context: 'Mirror selfie in what appears to be a hotel or upscale building. Aiah in a black leather outfit, Stacey in a cream knit top. Both leaning into each other naturally, both smiling.',
+    observation:
+      'Different setting from the home mirror selfie, same energy: completely at ease. One in black, one in cream. Leaning.',
+    significance:
+      'This is the second documented mirror selfie. The home version (file-012) shows off-duty casual comfort. This one shows the same ease in a more formal setting. The comfort does not depend on location.',
+    tags: ['mirror-selfie', 'comfort-duo', 'hotel', 'casual-closeness', 'black-and-cream'],
+    sourceLabel: 'Personal post (source confirmation pending)',
+    sourceUrl: null,
+    subject: 'both',
+    dynamicType: 'aiah-grounds-stacey',
+    status: 'needs-review',
+    dateAdded: '2025-01-01',
+  },
+  {
+    id: 'file-020',
+    caseLabel: 'FILE-020',
+    title: 'Stage Proximity — The Fan Lens Close-Up',
+    imageSrc: '/images/files/file-020.jpg',
+    imageAlt: 'Stage close-up — Stacey with pink hair leaning very close toward Aiah from the side, captured mid-performance',
+    context: 'Concert stage. Stacey (pink hair era) leaning in very close to Aiah from behind, mid-performance. Captured by a fan photographer.',
+    observation:
+      'This is the kind of moment casual viewers miss. You need to be watching specifically, or you need a fan camera pointed at exactly this angle at exactly this second.',
+    significance:
+      'Fan Lens documentation: the moments fans notice that the main cameras do not catch. The proximity in this frame is the whole point. A casual viewer sees a concert. A Starphrodite sees this.',
+    tags: ['fan-lens', 'proximity', 'stage', 'pink-hair', 'tiny-detail'],
+    sourceLabel: 'Fan concert photography (source pending)',
+    sourceUrl: null,
+    subject: 'both',
+    dynamicType: 'stacey-energizes-aiah',
+    status: 'needs-review',
+    dateAdded: '2025-01-01',
   },
 ];
 
