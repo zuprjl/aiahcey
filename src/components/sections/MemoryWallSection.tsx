@@ -22,7 +22,7 @@ export default function MemoryWallSection() {
   return (
     <section
       id="memory"
-      style={{ background: '#F0ECE6', paddingTop: '96px', paddingBottom: '96px' }}
+      style={{ background: '#F0ECE6', paddingTop: 'clamp(64px, 8vw, 96px)', paddingBottom: 'clamp(64px, 8vw, 96px)' }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
 

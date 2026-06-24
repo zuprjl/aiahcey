@@ -25,27 +25,42 @@ export default function CharacterStudySection({ study }: Props) {
       id={study.id}
       style={{ background: '#FFFFFF', overflow: 'hidden' }}
     >
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: isAiah ? '380px 1fr' : '1fr 380px',
-          minHeight: '640px',
-        }}
-        className="max-lg:flex max-lg:flex-col"
-      >
+      <style>{`
+        #${study.id} .char-grid {
+          display: grid;
+          grid-template-columns: ${isAiah ? '380px 1fr' : '1fr 380px'};
+          min-height: 640px;
+        }
+        @media (max-width: 1023px) {
+          #${study.id} .char-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            min-height: auto !important;
+          }
+          #${study.id} .char-photo-panel {
+            order: 0 !important;
+            min-height: 340px !important;
+          }
+          #${study.id} .char-text-panel {
+            order: 1 !important;
+            padding: 36px 24px 48px !important;
+          }
+        }
+      `}</style>
+      <div className={`char-grid char-grid-${study.id}`}>
         {/* Photo + color panel */}
         <motion.div
           initial={{ opacity: 0, x: isAiah ? -30 : 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="char-photo-panel"
           style={{
             position: 'relative',
             minHeight: '480px',
             order: isAiah ? 0 : 1,
             overflow: 'hidden',
           }}
-          className="max-lg:order-first"
         >
           {/* Portrait fills the panel — click to view full image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -143,6 +158,7 @@ export default function CharacterStudySection({ study }: Props) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
+          className="char-text-panel"
           style={{
             padding: 'clamp(40px, 6vw, 72px) clamp(32px, 5vw, 64px)',
             display: 'flex',
@@ -150,7 +166,6 @@ export default function CharacterStudySection({ study }: Props) {
             justifyContent: 'center',
             order: isAiah ? 1 : 0,
           }}
-          className="max-lg:order-last"
         >
           {/* Background */}
           <div style={{ marginBottom: '32px' }}>

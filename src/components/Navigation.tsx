@@ -5,12 +5,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { label: 'Why Aiahcey', href: '#why-aiahcey' },
+  { label: 'TikTok Bond', href: '#tiktoks' },
+  { label: 'Crashout Wall', href: '#crashout' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Aiah', href: '#aiah' },
   { label: 'Stacey', href: '#stacey' },
-  { label: 'The Formula', href: '#formula' },
-  { label: 'Evidence', href: '#evidence' },
   { label: 'Moments', href: '#moments' },
-  { label: 'Fan Lens', href: '#fan-lens' },
+  { label: 'Memory Album', href: '#memory' },
   { label: 'Files', href: '#files' },
 ];
 
@@ -136,13 +137,15 @@ export default function Navigation() {
                   onClick={(e) => handleNavClick(e, link.href)}
                   style={{
                     fontFamily: 'var(--font-sans)',
-                    fontSize: '13px',
+                    fontSize: '15px',
                     fontWeight: 400,
                     color: '#4A4A4A',
-                    padding: '10px 0',
+                    padding: '14px 0',
                     borderBottom: '1px solid #EDE9E3',
-                    display: 'block',
+                    display: 'flex',
+                    alignItems: 'center',
                     textDecoration: 'none',
+                    minHeight: '48px',
                   }}
                 >
                   {link.label}

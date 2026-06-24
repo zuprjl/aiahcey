@@ -79,6 +79,8 @@ function TikTokCard({ tiktok, index }: { tiktok: AiahceyTikTok; index: number })
           justifyContent: 'center',
           padding: '0',
           minHeight: '560px',
+          overflow: 'hidden',
+          maxWidth: '100%',
         }}
       >
         <TikTokEmbed
@@ -274,6 +276,7 @@ export default function TikTokBondSection() {
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '1px',
             background: 'rgba(247,244,240,0.06)',
+            minWidth: 0,
           }}
           className="tiktok-grid"
         >
@@ -301,10 +304,13 @@ export default function TikTokBondSection() {
         @media (max-width: 900px) {
           .tiktok-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
-        @media (max-width: 560px) {
-          .tiktok-grid {
-            grid-template-columns: 1fr !important;
-            overflow-x: auto;
+        @media (max-width: 640px) {
+          .tiktok-grid { grid-template-columns: 1fr !important; }
+          .tiktok-grid > * { min-width: 0; overflow: hidden; }
+          .tiktok-grid blockquote.tiktok-embed {
+            max-width: 100% !important;
+            min-width: 0 !important;
+            width: 100% !important;
           }
         }
       `}</style>

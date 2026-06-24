@@ -31,7 +31,10 @@
 }
 
 /* ── Base ── */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   background-color: var(--color-paper);
@@ -41,6 +44,12 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Touch feedback ── */
+button, a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ── Selection ── */
@@ -139,4 +148,91 @@ body {
   background: white;
   padding: 8px 8px 36px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* ── Character study responsive grid ── */
+.char-grid {
+  display: grid;
+  min-height: 640px;
+}
+.char-grid-aiah  { grid-template-columns: 380px 1fr; }
+.char-grid-stacey { grid-template-columns: 1fr 380px; }
+
+@media (max-width: 1023px) {
+  .char-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+  .char-photo-panel {
+    order: 0 !important;
+    min-height: 360px !important;
+  }
+  .char-text-panel {
+    order: 1 !important;
+    padding: 40px 24px !important;
+  }
+}
+
+/* ── Gallery carousel responsive padding ── */
+.gallery-carousel-wrapper {
+  padding: 0 68px;
+}
+@media (max-width: 640px) {
+  .gallery-carousel-wrapper {
+    padding: 0 44px;
+  }
+}
+@media (max-width: 380px) {
+  .gallery-carousel-wrapper {
+    padding: 0 36px;
+  }
+}
+
+/* ── TikTok embeds — never overflow ── */
+.tiktok-grid > * {
+  min-width: 0;
+  overflow: hidden;
+}
+.tiktok-grid blockquote.tiktok-embed {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* ── Mobile section padding ── */
+@media (max-width: 640px) {
+  #tiktoks, #crashout, #memory, #moments, #files, #gallery, #timeline {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
+/* ── Crashout wall — mobile filter scroll ── */
+.crashout-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+@media (max-width: 640px) {
+  .crashout-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .crashout-filters::-webkit-scrollbar {
+    display: none;
+  }
+  .crashout-filters button {
+    flex-shrink: 0;
+    min-height: 36px;
+  }
+}
+
+/* ── Mobile-friendly filter buttons throughout site ── */
+@media (max-width: 640px) {
+  button {
+    min-height: 40px;
+  }
 }

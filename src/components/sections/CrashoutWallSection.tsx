@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import crashoutReactions, { type CrashoutReaction } from '@/data/crashoutReactions';
 
@@ -107,9 +107,9 @@ function ReactionCard({ reaction, index }: { reaction: CrashoutReaction; index: 
       <p
         style={{
           fontFamily: 'var(--font-body)',
-          fontSize: '15px',
+          fontSize: 'clamp(15px, 3.8vw, 16px)',
           color: '#1C1C1E',
-          lineHeight: 1.65,
+          lineHeight: 1.7,
           margin: 0,
           letterSpacing: '-0.01em',
         }}
@@ -203,14 +203,17 @@ export default function CrashoutWallSection() {
 
         {/* Filter bar */}
         <div
+          className="crashout-filters"
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '6px',
             marginBottom: '36px',
-            overflowX: 'auto',
+            display: 'flex',
+            flexWrap: 'wrap' as const,
+            gap: '6px',
+            overflowX: 'auto' as const,
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'none' as const,
             paddingBottom: '4px',
-          }}
+          } as React.CSSProperties}
         >
           {THEMES.map((t) => (
             <button

@@ -42,6 +42,7 @@ function FloatingPhotocard({
   return (
     <motion.div
       className="absolute pointer-events-none hidden lg:block"
+      aria-hidden="true"
       style={{
         ...style,
         zIndex: 2,
@@ -202,9 +203,49 @@ export default function HeroSection() {
           </p>
         </motion.div>
 
+        {/* Mobile photo strip — two polaroids below text, hidden on desktop */}
+        <div className="lg:hidden flex gap-4 justify-center mt-10">
+          {photocards.map((card) => (
+            <motion.div
+              key={card.src}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.6 }}
+              style={{
+                background: '#FFFFFF',
+                padding: '6px 6px 24px',
+                boxShadow: '0 6px 24px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07)',
+                transform: `rotate(${card.rotation}deg)`,
+                width: '138px',
+                flexShrink: 0,
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={card.src}
+                alt={card.alt}
+                style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block' }}
+              />
+              <p
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontStyle: 'italic',
+                  fontSize: '9px',
+                  color: '#8C8884',
+                  textAlign: 'center',
+                  marginTop: '7px',
+                  lineHeight: 1.3,
+                }}
+              >
+                {card.caption}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Scroll indicator */}
         <motion.div
-          className="mt-14 flex flex-col items-center gap-2"
+          className="mt-10 lg:mt-14 flex flex-col items-center gap-2"
           style={{ color: '#C4BEB8' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

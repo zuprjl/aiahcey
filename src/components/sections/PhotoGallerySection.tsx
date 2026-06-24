@@ -47,7 +47,12 @@ export default function PhotoGallerySection() {
   const current = slides[index];
 
   return (
-    <section id="gallery" style={{ background: '#1C1C1E', paddingTop: '96px', paddingBottom: '96px' }}>
+    <section id="gallery" style={{ background: '#1C1C1E', paddingTop: 'clamp(64px,8vw,96px)', paddingBottom: 'clamp(64px,8vw,96px)' }}>
+      <style>{`
+        .gallery-carousel-wrapper { padding: 0 68px; }
+        @media (max-width: 640px) { .gallery-carousel-wrapper { padding: 0 44px; } }
+        @media (max-width: 390px) { .gallery-carousel-wrapper { padding: 0 36px; } }
+      `}</style>
 
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '52px' }}>
@@ -72,7 +77,7 @@ export default function PhotoGallerySection() {
       </div>
 
       {/* Carousel */}
-      <div style={{ position: 'relative', maxWidth: '720px', margin: '0 auto', padding: '0 68px' }}>
+      <div className="gallery-carousel-wrapper" style={{ position: 'relative', maxWidth: '720px', margin: '0 auto' }}>
 
         {/* Prev */}
         <ArrowBtn onClick={prev} label="Previous photo" dir="left" />
