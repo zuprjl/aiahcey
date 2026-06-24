@@ -12,6 +12,7 @@ const THEMES = [
   { label: 'Origin Story', value: 'origin-story' },
   { label: 'Comfort Duo', value: 'comfort-duo' },
   { label: 'No Explanation', value: 'unanswerable' },
+  { label: 'Tagalog Hours', value: 'tagalog-hours' },
 ];
 
 // Alternate blue/pink per card for visual rhythm

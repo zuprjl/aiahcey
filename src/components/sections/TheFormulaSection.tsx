@@ -16,7 +16,7 @@ export default function TheFormulaSection() {
           transition={{ duration: 0.6 }}
           style={{ marginBottom: '72px' }}
         >
-          <p className="eyebrow" style={{ marginBottom: '20px' }}>Five Structural Reasons</p>
+          <p className="eyebrow" style={{ marginBottom: '20px' }}>why it works</p>
           <h2
             style={{
               fontFamily: 'var(--font-display)',
@@ -41,7 +41,7 @@ export default function TheFormulaSection() {
               maxWidth: '480px',
             }}
           >
-            Five documented reasons why this particular pairing holds up to scrutiny — not just as a fan ship, but as a structurally interesting dynamic.
+            Five reasons I keep coming back to when someone asks me to explain it. And trust me, I have tried to explain it many times.
           </p>
         </motion.div>
 
