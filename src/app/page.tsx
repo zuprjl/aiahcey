@@ -14,6 +14,7 @@ import FanLensSection from "@/components/sections/FanLensSection";
 import TimelineSection from "@/components/sections/TimelineSection";
 import AiahceyFilesSection from "@/components/sections/AiahceyFilesSection";
 import TikTokBondSection from "@/components/sections/TikTokBondSection";
+import CrashoutWallSection from "@/components/sections/CrashoutWallSection";
 import DisclaimerSection from "@/components/sections/DisclaimerSection";
 import characterStudies from "@/data/characterStudies";
 
@@ -33,6 +34,7 @@ export default function Home() {
         {/* Act 2 — Who they are */}
         <WhyAiahceySection />
         <TikTokBondSection />
+        <CrashoutWallSection />
         <CharacterStudySection study={aiah} />
         <CharacterStudySection study={stacey} />
         <TheFormulaSection />
