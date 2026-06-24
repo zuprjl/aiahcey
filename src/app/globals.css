@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  /* Aiah — Glacier Blue */
+  --color-aiah: #87BFDA;
+  --color-aiah-light: #D0E8F2;
+  --color-aiah-pale: #EAF4FA;
+
+  /* Stacey — Warm Pink */
+  --color-stacey: #E8A0B0;
+  --color-stacey-light: #F2C4CE;
+  --color-stacey-pale: #FDE8EE;
+
+  /* Base — warm off-white paper */
+  --color-paper: #F7F4F0;
+  --color-paper-dark: #EDE9E3;
+  --color-white: #FFFFFF;
+
+  /* Text */
+  --color-ink: #1C1C1E;
+  --color-ink-secondary: #4A4A4A;
+  --color-ink-muted: #8C8884;
+  --color-ink-faint: #C4BEB8;
+
+  /* Accent */
+  --color-accent: #3D5A73;
+
+  /* Fonts */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ── Base ── */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--color-stacey-light);
+  color: var(--color-ink);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--color-paper); }
+::-webkit-scrollbar-thumb { background: var(--color-ink-faint); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-muted); }
+
+/* ── Typography utilities ── */
+.font-display { font-family: var(--font-display); }
+.font-sans    { font-family: var(--font-sans); }
+
+/* Eyebrow label — the editorial workhorse */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+/* Pull quote */
+.pull-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+/* Thin rule */
+.rule {
+  border: none;
+  border-top: 1px solid var(--color-paper-dark);
+  margin: 0;
+}
+
+/* ── Line clamps ── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Status badges ── */
+.badge-review {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+  border-radius: 3px;
+  padding: 2px 7px;
+}
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  border-radius: 3px;
+  padding: 2px 7px;
+}
+
+/* ── Editorial card ── */
+.ed-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-paper-dark);
+  border-radius: 2px;
+}
+
+/* ── Polaroid ── */
+.polaroid {
+  background: white;
+  padding: 8px 8px 36px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.06);
+}

@@ -1,0 +1,133 @@
+export interface GalleryItem {
+  id: string;
+  src: string;
+  alt: string;
+  category: 'events' | 'concerts' | 'selfies' | 'cute' | 'chaotic' | 'bts' | 'tweets';
+  caption: string;
+  date: string;
+  year: number;
+  featured: boolean;
+}
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: 'gallery-1',
+    src: '/images/placeholder-gallery-1.jpg',
+    alt: 'Aiah and Stacey at debut showcase',
+    category: 'events',
+    caption: 'Debut showcase — first time standing on that stage together',
+    date: 'January 2021',
+    year: 2021,
+    featured: true,
+  },
+  {
+    id: 'gallery-2',
+    src: '/images/placeholder-gallery-2.jpg',
+    alt: 'Behind the scenes selfie',
+    category: 'selfies',
+    caption: 'Pre-show selfie, backstage mirrors and all',
+    date: 'March 2022',
+    year: 2022,
+    featured: true,
+  },
+  {
+    id: 'gallery-3',
+    src: '/images/placeholder-gallery-3.jpg',
+    alt: 'Manila concert stage',
+    category: 'concerts',
+    caption: 'Manila concert — the bridge moment',
+    date: 'December 2022',
+    year: 2022,
+    featured: true,
+  },
+  {
+    id: 'gallery-4',
+    src: '/images/placeholder-gallery-4.jpg',
+    alt: 'Stacey laughing during vlive',
+    category: 'cute',
+    caption: 'That laugh. You know the one.',
+    date: 'March 2022',
+    year: 2022,
+    featured: false,
+  },
+  {
+    id: 'gallery-5',
+    src: '/images/placeholder-gallery-5.jpg',
+    alt: 'Backstage before performance',
+    category: 'bts',
+    caption: 'Five minutes before showtime — same calm, different faces',
+    date: 'June 2023',
+    year: 2023,
+    featured: false,
+  },
+  {
+    id: 'gallery-6',
+    src: '/images/placeholder-gallery-6.jpg',
+    alt: 'Chip incident screenshot',
+    category: 'chaotic',
+    caption: 'The chip. THE chip.',
+    date: 'August 2023',
+    year: 2023,
+    featured: true,
+  },
+  {
+    id: 'gallery-7',
+    src: '/images/placeholder-gallery-7.jpg',
+    alt: 'Airport photo with umbrella',
+    category: 'events',
+    caption: 'Airport arrival — Stacey and her umbrella',
+    date: 'April 2023',
+    year: 2023,
+    featured: false,
+  },
+  {
+    id: 'gallery-8',
+    src: '/images/placeholder-gallery-8.jpg',
+    alt: 'Aiah and Stacey red carpet',
+    category: 'events',
+    caption: 'Matching outfits, matching energy',
+    date: 'June 2025',
+    year: 2025,
+    featured: true,
+  },
+  {
+    id: 'gallery-9',
+    src: '/images/placeholder-gallery-9.jpg',
+    alt: 'Fan tweet screenshot compilation',
+    category: 'tweets',
+    caption: '"Already there. Already helping." — @stagemagicwatcher',
+    date: 'February 2024',
+    year: 2024,
+    featured: false,
+  },
+  {
+    id: 'gallery-10',
+    src: '/images/placeholder-gallery-10.jpg',
+    alt: 'Birthday celebration backstage',
+    category: 'bts',
+    caption: 'Aiah\'s birthday backstage — the handwritten letter era',
+    date: 'October 2024',
+    year: 2024,
+    featured: false,
+  },
+  {
+    id: 'gallery-11',
+    src: '/images/placeholder-gallery-11.jpg',
+    alt: 'Cute moment during practice',
+    category: 'cute',
+    caption: 'Practice room — caught off guard, both of them',
+    date: 'September 2023',
+    year: 2023,
+    featured: false,
+  },
+  {
+    id: 'gallery-12',
+    src: '/images/placeholder-gallery-12.jpg',
+    alt: 'Stage performance fancam capture',
+    category: 'concerts',
+    caption: 'Valentines performance — the quiet save',
+    date: 'February 2024',
+    year: 2024,
+    featured: true,
+  },
+];
